@@ -154,8 +154,8 @@ footer {
 }
 
 .participants-list {
-  list-style: disc;
-  padding-left: 20px;
+  list-style: none;
+  padding-left: 0;
   margin: 0;
 }
 
@@ -182,6 +182,31 @@ footer {
   display: inline-block;
   flex: 0 0 32px;
   margin-right: 6px;
+}
+
+/* Remove button next to each participant */
+.remove-btn {
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.remove-btn:hover {
+  background: rgba(198, 40, 40, 0.08);
+}
+
+.participant-email {
+  /* keep email readable and allow truncation if needed */
+  display: inline-block;
+  max-width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* Placeholder when no participants */

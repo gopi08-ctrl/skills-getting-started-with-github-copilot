@@ -142,3 +142,77 @@ footer {
   padding: 20px;
   color: #666;
 }
+
+.participants {
+  margin-top: 12px;
+}
+
+.participants h5 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #1a237e;
+}
+
+.participants-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.participants-list li {
+  margin-bottom: 8px;
+  padding: 8px 10px;
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Decorative circular "avatar" dot for each participant */
+.participants-list li::before {
+  content: "";
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #1a237e, #3949ab);
+  border-radius: 50%;
+  display: inline-block;
+  flex: 0 0 32px;
+  margin-right: 6px;
+}
+
+/* Remove button next to each participant */
+.remove-btn {
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.remove-btn:hover {
+  background: rgba(198, 40, 40, 0.08);
+}
+
+.participant-email {
+  /* keep email readable and allow truncation if needed */
+  display: inline-block;
+  max-width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Placeholder when no participants */
+.no-participants {
+  color: #666;
+  font-style: italic;
+  background-color: transparent;
+  margin: 0;
+}
